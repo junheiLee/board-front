@@ -4,12 +4,13 @@
     <title>읽기</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="/style.css">
+    
 </head>
 
 <body>
 <form>
     <div class="post">
-        <h1 class="post-title">제목</h1>
+        <h1 class="post-title" id="title">제목</h1>
 
         <div style="display: inline-block">
             <button type="button" onclick="submitForm()">수정</button>
@@ -18,14 +19,17 @@
             <button type="button" onclick="submitForm()">삭제</button>
         </div>
 
-        <div class="post-content">
+        <div class="post-content" id="content">
             <p>
-                게시글 내용입니다. 여러 줄로 구성된 글을 표시할 수 있습니다. 이머하는거죠ㄱㄷㄱㄷㅇㅋㅇㅋ
+                게시글 내용입니다. 여러 줄로 구성된 글을 표시할 수 있습니다.
             </p>
 
         </div>
         <div class="post-date">작성일: 2023-05-23</div>
+        <button type="button" onclick="submitForm()">목록</button>
+        </div>
     </div>
 </form>
+<script src="read.js"></script>
 </body>
 </html>
