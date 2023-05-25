@@ -11,7 +11,7 @@ async function fetchPostById(postId) {
     title.innerHTML = `<h1>${data.title}</h1>`;
 
     const content = this.document.getElementById(`content`);
-    content.innerHTML =`<p>${data.content}</p>`;
+    content.innerHTML =`<p>${data.content.replaceAll('\r\n', '<br>')}</p>`;
 }
 
 function goToList() {
