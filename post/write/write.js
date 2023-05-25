@@ -3,7 +3,7 @@ document.getElementById('postForm').addEventListener('submit', function(event) {
 
     const formData = new FormData(event.target);
 
-    fetch('http://localhost:8080/posts', {
+    fetch(`http://localhost:8080/posts`, {
         method: "POST",
         body: formData
     })
@@ -16,7 +16,7 @@ document.getElementById('postForm').addEventListener('submit', function(event) {
     .then(data => {
         const postId = data.postId;
         console.log(postId);
-        window.location.href = "/post/detail/?postId=" + postId;
+        window.location.href = `/post/detail/?postId=` + postId;
     });
 
     
