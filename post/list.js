@@ -11,9 +11,13 @@ async function loadPosts() {
 
     for(var i=0; i<dataList.length; i++) {
         const dto = JSON.parse(JSON.stringify(dataList[i]));
-        
+
         const liElement = document.createElement('li');
-        liElement.textContent = dto.title;
+        const linkElement = document.createElement(`a`);
+        linkElement.href = `/post/detail/?postId=` + dto.postId;
+        linkElement.textContent = dto.title;
+
+        liElement.appendChild(linkElement);
         ulElement.appendChild(liElement);
     }
     
