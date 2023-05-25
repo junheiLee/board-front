@@ -12,6 +12,11 @@ async function fetchPostById(postId) {
 
     const content = this.document.getElementById(`content`);
     content.innerHTML =`<p>${data.content.replaceAll('\r\n', '<br>')}</p>`;
+
+    var date = new Date(data.date);
+    const postDate = this.document.getElementById(`post-date`);
+    postDate.innerHTML = `작성일: `+ date.toLocaleDateString();
+
 }
 
 function goToList() {
