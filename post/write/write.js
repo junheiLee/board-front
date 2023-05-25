@@ -15,8 +15,8 @@ document.getElementById('postForm').addEventListener('submit', function(event) {
     })
     .then(data => {
         const postId = data.postId;
-        console.assert(postId);
-        window.location.href = "/post/read/" + postId;
+        console.log(postId);
+        window.location.href = "/post/detail/?postId=" + postId;
     });
 
     
