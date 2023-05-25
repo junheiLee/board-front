@@ -7,20 +7,15 @@ async function fetchPostById(postId) {
     const data = await response.json();
     console.log(data);
 
-    const title = this.document.getElementById('title');
+    const title = this.document.getElementById(`title`);
     title.innerHTML = `<h1>${data.title}</h1>`;
 
-    const content = this.document.getElementById('content');
+    const content = this.document.getElementById(`content`);
     content.innerHTML =`<p>${data.content}</p>`;
+}
 
-
-    // .then(data => {
-    //     const title = this.document.getElementById('title');
-    //     content.innerHTML = `<h1>${data.title}</h1>`;
-    //     const content = this.document.getElementById('content');
-    //     content.innerHTML ='<p>${data.content}</p>';
-
-    // })
+function goToList() {
+  window.location.href = "/post/";
 }
 
 window.addEventListener('DOMContentLoaded', function() {
