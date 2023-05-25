@@ -14,9 +14,20 @@ async function loadPosts() {
 
         const liElement = document.createElement('li');
         const linkElement = document.createElement(`a`);
-        linkElement.href = `/post/detail/?postId=` + dto.postId;
-        linkElement.textContent = dto.title;
+        const divElementTitle = document.createElement(`div`);
+        const divElementDate = document.createElement(`div`);
+        
+        divElementTitle.textContent = dto.title;
+        divElementTitle.id=`post-title`;
 
+        var date = new Date(dto.date);
+        divElementDate.textContent = date.toLocaleDateString();
+        divElementDate.id=`post-date`;
+
+        linkElement.href = `/post/detail/?postId=` + dto.postId;
+
+        linkElement.appendChild(divElementTitle);
+        linkElement.appendChild(divElementDate);
         liElement.appendChild(linkElement);
         ulElement.appendChild(liElement);
     }
