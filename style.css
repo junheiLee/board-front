@@ -66,11 +66,11 @@ button {
     border-radius: 5px;
 }
 
-.post-title {
+#post-title {
     font-weight: bold;
 }
 
-.post-date {
+#post-date {
     font-size: 12px;
     color: #888;
     text-align: left;
@@ -83,3 +83,8 @@ body{
     background-color: #b4bdb6;
     border-radius: 5px;
 }
+
+li a {
+    text-decoration: none;
+  }
+  

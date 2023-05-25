@@ -21,7 +21,7 @@ async function loadPosts() {
         divElementTitle.id=`post-title`;
 
         var date = new Date(dto.date);
-        divElementDate.textContent = date.toLocaleDateString();
+        divElementDate.textContent = '작성일: ' + date.toLocaleDateString();
         divElementDate.id=`post-date`;
 
         linkElement.href = `/post/detail/?postId=` + dto.postId;
