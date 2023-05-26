@@ -1,4 +1,5 @@
 function goToWriteForm() {
+    event.preventDefault();
     window.location.href = "/post/write/";
 }
 
