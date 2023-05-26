@@ -1,6 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const postId = urlParams.get("postId");
 
+
 // 삭제 확인
 function confirmDelete() {
   var result = confirm("삭제 할거니?");
@@ -19,6 +20,11 @@ async function deletePost() {
   })
 
   window.location.href = `/post/`;
+}
+
+// 목록으로 돌아가기 버튼
+function goToModifyForm() {
+  window.location.href = `/post/write/?postId=${postId}`;
 }
 
 
