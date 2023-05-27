@@ -42,8 +42,10 @@ async function loadCurruntPost(postId) {
     const curruntResponse = await fetch(`http://localhost:8080/posts/${postId}`)
     const curruntData = await curruntResponse.json();
 
-    document.getElementsByName("title").value = curruntData.title;
-    document.getElementsByName("content").value = curruntData.content;
+    const formData = document.getElementById("postForm");
+
+    formData.querySelector("input").value = curruntData.title;
+    formData.querySelector("textarea").value = curruntData.content;
 }
 
 async function modify(event) {
