@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>   
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <title id="pageTitle">회원 가입</title>
+</head>
+
+<body>
+<form id="joinForm">
+    <h1 id="heading">회원 가입</h1>
+    <div class="center">
+    <tr>
+        <td>
+            <label for="memberId">id</label>
+            <div style="display: inline-block">
+                <input class="input-join" type="text" name="memberId" required>
+            </div>
+            <input class="input-checkId" type="button" value="중복 확인"></button></td>
+    </tr><br>
+
+    <tr>
+        <td><label for="memberName">name</label></td>
+        <div style="display: inline-block">
+            <td><input class="input-join" type="text" name="memberName"  required><br></td>
+        </div>
+    </tr><br>
+
+    <tr>
+        <td><label for="password">password</label></td>
+        <div style="display: inline-block">
+            <td><input class="input-join" type="text" name="password" required><br></td>
+        </div>
+    </tr>
+    </div>
+
+    <button type="submit">저장</button>
+</form>
+
+</body>
+    <script src="join.js"></script>
+</html>
